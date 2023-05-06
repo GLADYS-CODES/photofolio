@@ -8,7 +8,7 @@ function Home() {
 
   useEffect(() => {
     async function fetchPhotos() {
-      const response = await fetch(`https://api.unsplash.com/photos/?client_id=${wzHpQ6ch1lTEqZL-qQoOimq8lKbVmYOry9Rku9-PuHg}`);
+      const response = await fetch(`https://api.unsplash.com/photos/?client_id=${ACCESS_KEY}`);
       const data = await response.json();
       setPhotos(data);
     }

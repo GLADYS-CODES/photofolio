@@ -1,30 +1,31 @@
 import React from 'react';
 import { FaFacebook, FaInstagram, FaLinkedinIn, FaTwitter } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 function Navbar() {
   return (
     <nav className="bg-black text-white py-4 px-6 flex justify-between items-center">
       <div>
-        <a href="/" className="text-2xl font-bold">
+        <Link to="/" className="text-2xl font-bold">
           Photofolio
-        </a>
+        </Link>
       </div>
       <div className="hidden md:flex items-center justify-center">
-        <a href="/" className="mx-4 hover:text-green-500">
+        <Link to="/" className="mx-4 hover:text-green-500">
           Home
-        </a>
-        <a href="/about" className="mx-4 hover:text-green-500">
+        </Link>
+        <Link to="/about" className="mx-4 hover:text-green-500">
           About
-        </a>
-        <a href="/services" className="mx-4 hover:text-green-500">
+        </Link>
+        <Link to="/services" className="mx-4 hover:text-green-500">
           Services
-        </a>
-        <a href="/gallery" className="mx-4 hover:text-green-500">
+        </Link>
+        <Link to="/gallery" className="mx-4 hover:text-green-500">
           Gallery
-        </a>
-        <a href="/contact" className="mx-4 hover:text-green-500">
+        </Link>
+        <Link to="/contact" className="mx-4 hover:text-green-500">
           Contact
-        </a>
+        </Link>
       </div>
       <div className="flex items-center justify-center">
         <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" className="mx-2">
