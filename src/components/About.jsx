@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 //import Navbar from './Navbar';
-import Testimonial from './Testimonial';
+//import Testimonial from './TestimonialCard';
 import axios from 'axios';
 
 function About() {
@@ -58,7 +58,7 @@ function About() {
               ))}
             </div>
           ) : (
-            <p className="text-white text-center">What they are saying.</p>
+            <p className="text-white text-center text-lg">What they are saying.</p>
           )}
         </div>
       </div>
