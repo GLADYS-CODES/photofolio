@@ -1,69 +1,47 @@
+import React from "react";
 
-import React, { useState, useEffect } from 'react';
-//import Navbar from './Navbar';
-//import Testimonial from './TestimonialCard';
-import axios from 'axios';
+import profile  from "../assets/profile-img.jpg";
+//import {FaArrowRight} from 'react-icons/fa'
 
-function About() {
-  const [photo, setPhoto] = useState(null);
-  const [testimonials, setTestimonials] = useState([]);
+//import React from 'react';
+import { FaArrowRight } from 'react-icons/fa';
 
-  useEffect(() => {
-    // Fetch the photo from Unsplash API
-    axios.get('https://api.unsplash.com/photos/random', {
-      params: {
-        query: 'portrait',
-        orientation: 'squarish',
-        client_id: 'wzHpQ6ch1lTEqZL-qQoOimq8lKbVmYOry9Rku9-PuHg'
-      }
-    })
-    .then(response => {
-      setPhoto(response.data.urls.regular);
-    })
-    .catch(error => {
-      console.log(error);
-    });
-
-    // Fetch the testimonials from your API
-    axios.get('/api/testimonials')
-    .then(response => {
-      setTestimonials(response.data);
-    })
-    .catch(error => {
-      console.log(error);
-    });
-  }, []);
-
+const About = () => {
   return (
-    <div className="bg-black">
-      
-      <div className="container mx-auto py-20">
-        <div className="flex flex-col sm:flex-row items-center">
-          <div className="w-full sm:w-1/3 mb-8 sm:mb-0">
-            <h2 className="text-4xl font-bold mb-4 text-white">About Me</h2>
-            <p className="text-white text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, tellus quis commodo lobortis, massa turpis congue mi, in malesuada nibh elit vel magna. Ut tristique faucibus odio, vitae congue dolor faucibus at. Etiam euismod felis eget sapien feugiat imperdiet.</p>
-          </div>
-          <div className="w-full sm:w-2/3 flex justify-center">
-            {photo && <img src={photo} alt="Portrait" className="w-64 h-64 object-cover rounded-full shadow-lg" />}
+    <div className="container mx-auto p-4 bg-black text-white">
+      <h1 className="text-3xl font-bold mb-4">About Me</h1>
+      <p className="text-lg text-gray-800">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae elit vitae leo molestie fringilla. Curabitur quis velit in ligula aliquam dapibus eu sit amet diam. In tincidunt, ex et dapibus placerat, tellus elit consequat massa, at feugiat dolor erat a nisi. Sed efficitur fringilla fermentum. Integer tincidunt velit et quam vestibulum, eu tincidunt ligula vulputate. Curabitur vel tincidunt felis. Nullam in tincidunt ex, vel fermentum purus. Duis sed sapien in ligula lacinia mattis in id metus.
+      </p>
+
+      <div className="flex mt-8">
+        <div className="max-w-sm rounded overflow-hidden shadow-lg bg-white mr-8">
+          <img src={profile} alt=" " className="w-full" />
+          <div className="px-6 py-4">
+            <div className="font-bold text-xl mb-2">Jenny </div>
+            <p className="text-gray-700 text-base">
+            I'm a  passionate photographer with a love for capturing beautiful moments. I specialize in landscape and portrait photography. Let me share my art with you.
+            </p>            
           </div>
         </div>
-      </div>
-      <div className="container mx-auto py-20">
-        
-        <div className="flex flex-wrap overflow-hidden">
-          {testimonials.length > 0 ? (
-            <div className="carousel w-full overflow-x-scroll scrollbar-hide">
-              {testimonials.map((testimonial, index) => (
-                <Testimonial key={index} data={testimonial} />
-              ))}
-            </div>
-          ) : (
-            <p className="text-white text-center text-lg">What they are saying.</p>
-          )}
+
+        <div className="flex flex-col">
+          <div className="mb-4">
+            <FaArrowRight className="inline-block align-middle text-gray-400 mr-2" />
+            <span className="text-gray-400">Age: </span> 30
+          </div>
+          <div className="mb-4">
+            <FaArrowRight className="inline-block align-middle text-gray-400 mr-2" />
+            <span className="text-gray-400">Education: </span> Bachelor's Degree
+          </div>
+          <div className="mb-4">
+            <FaArrowRight className="inline-block align-middle text-gray-400 mr-2" />
+            <span className="text-gray-400">Work Experience: </span> 5 years
+          </div>
         </div>
       </div>
     </div>
   );
-}
+};
 
 export default About;
