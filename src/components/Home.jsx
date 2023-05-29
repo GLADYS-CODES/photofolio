@@ -43,7 +43,8 @@ function Home() {
                 <h3 className="text-xl font-bold mb-2">{photo.alt_description}</h3>
                 <p className="text-gray-700">{photo.user.name}</p>
               </div>
-            </div>
+            </ 
+            div>
           ))}
         </div>
       </div>
