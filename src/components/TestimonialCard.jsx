@@ -7,6 +7,9 @@ import "./style.css";
 import { Pagination, Navigation } from "swiper";
 
 import testimonialImage from "../assets/testimonials-2.jpg";
+import testimonialImage2 from "../assets/testimonials1.jpg";
+import testimonialImage3 from "../assets/testimonials-3.jpg";
+
 
 export default function Testimonial() {
   return (
