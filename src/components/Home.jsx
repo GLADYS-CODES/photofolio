@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-//import Footer from './Footer';
+import Footer from './Footer';
 //import Navbar from './Navbar';
 import './Home.css';
 const ACCESS_KEY = 'wzHpQ6ch1lTEqZL-qQoOimq8lKbVmYOry9Rku9-PuHg';
@@ -49,7 +49,7 @@ function Home() {
           ))}
         </div>
       </div>
-      
+      <Footer />
     </div>
     
 
