@@ -7,7 +7,7 @@ import Home from './components/Home';
 import About from './components/About';
 import Services from './components/Services';
 //import Gallery from './components/Gallery';
-//import Contact from './components/Contact';
+import Contact from './components/Contact';
 
 const App = () => {
   return (
@@ -17,8 +17,8 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/services" element={<Services />} />
-     {/*   <Route path="/gallery" element={<Gallery />} />
-       /* <Route path="/contact" element={<Contact />} /> */}
+     {/*   <Route path="/gallery" element={<Gallery />} />*/}
+       <Route path="/contact" element={<Contact />} /> 
       </Routes>
     </Router>
   );
