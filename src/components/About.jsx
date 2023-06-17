@@ -1,4 +1,5 @@
-import Testimonial from './TestimonialCard';
+import Footer from './Footer';
+//import Testimonial from './TestimonialCard';
 
 import React from 'react';
 import profile from '../assets/profile-img.jpg';
@@ -9,7 +10,7 @@ const About = () => {
     <div className="container mx-auto p-4 bg-black text-white">
       <div className='flex flex-col items-center justify-center'>
       <h1 className="text-3xl font-bold mb-4 text-center hover:text-green-500">About Me</h1>
-      <p className="text-lg text-gray-800">
+      <p className="text-lg text-neutral-400">
         I'm a passionate photographer with a love for capturing beautiful moments. I specialize in landscape and portrait photography. Let me share my art with you.
       </p>
       </div>
@@ -48,10 +49,12 @@ const About = () => {
         </div>
       </div>
 <div>
-      <h1 className="text-2xl font-bold mt-8">What They Are Saying</h1>
-      <Testimonial />
+      {/*<h1 className="text-2xl font-bold mt-8">What They Are Saying</h1>*/}
+      
       </div>
+      <Footer />
     </div>
+    
     
   );
 };
